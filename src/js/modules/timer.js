@@ -1,5 +1,6 @@
 const timer = (id, deadline) => {
     const addZero = (num) => {
+        console.log('add zero function');
         if (num <= 9) {
             return '0' + num;
         } else {
@@ -8,6 +9,7 @@ const timer = (id, deadline) => {
     };
 
     const getTimeRemaining = (endtime) => {
+        console.log('get remaining function');
         const t = Date.parse(endtime) - Date.parse(new Date()),
               seconds = Math.floor((t/1000) % 60),
               minutes = Math.floor((t/1000/60) % 60),
@@ -53,6 +55,7 @@ const timer = (id, deadline) => {
     };
 
     setClock(id, deadline);
+    console.log('everything is working')
 };
 
 export default timer;

@@ -17,6 +17,25 @@ body {
   display: block;
   color: red;
 }
+.faded {
+  animation: faded 1.5s linear;
+
+}
+@keyframes faded {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.button:hover {
+  box-shadow: 1px 0px 34px 4px rgba(99, 225, 50, 0.45);
+}
+.preview:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
 
 a:hover {
   text-decoration: none;

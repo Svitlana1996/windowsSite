@@ -17809,7 +17809,7 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', function () {
   var modalState = {};
-  var deadline = '2020-12-25';
+  var deadline = '2020-12-28';
   Object(_modules_changeModalState__WEBPACK_IMPORTED_MODULE_4__["default"])(modalState);
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.glazing_slider', '.glazing_block', '.glazing_content', 'active');
@@ -18230,6 +18230,8 @@ var tabs = function tabs(headerSelector, tabSelector, contentSelector, activeCla
 __webpack_require__.r(__webpack_exports__);
 var timer = function timer(id, deadline) {
   var addZero = function addZero(num) {
+    console.log('add zero function');
+
     if (num <= 9) {
       return '0' + num;
     } else {
@@ -18238,6 +18240,7 @@ var timer = function timer(id, deadline) {
   };
 
   var getTimeRemaining = function getTimeRemaining(endtime) {
+    console.log('get remaining function');
     var t = Date.parse(endtime) - Date.parse(new Date()),
         seconds = Math.floor(t / 1000 % 60),
         minutes = Math.floor(t / 1000 / 60 % 60),
@@ -18279,6 +18282,7 @@ var timer = function timer(id, deadline) {
   };
 
   setClock(id, deadline);
+  console.log('everything is working');
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (timer);
